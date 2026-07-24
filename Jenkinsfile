@@ -2,10 +2,12 @@ pipeline {
 	agent any
 
 	stages {
-		stage('Test') {
+		stage('Terraform Activation') {
 			steps {
-				echo 'This is a test of the JenkinsFile.'
+				sh 'terraform init'
+				sh 'terraform apply -auto-approve'
 				}
-				}
+			}
+				
 		}
 	}
