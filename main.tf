@@ -26,8 +26,4 @@ resource "docker_container" "page" {
 		internal = 80
 		external = 8081
 		}
-
-	triggers = {
-		image_id = docker_image.page.image_id
-		}
 }
